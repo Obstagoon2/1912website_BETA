@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close menu when a nav link is clicked (on mobile)
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 1516) {
                     hamburger.classList.remove('open');
                     navLinks.classList.remove('open');
                 }

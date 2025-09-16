@@ -293,8 +293,8 @@ header {
 .social-icons a:hover { transform: scale(1.1); }
 
 .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
 }
 
@@ -327,7 +327,7 @@ footer p {
     .bonfire .sponsor-logo img { max-height: 110px; max-width: 190px; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1516px) {
     :root { --header-height: 80px; }
     
     .nav-links { display: none; }
@@ -1338,7 +1338,7 @@ footer p {
 .hamburger.open .hamburger-bar:nth-child(3) {
     transform: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 1516px) {
     .hamburger {
         display: flex;
     }
