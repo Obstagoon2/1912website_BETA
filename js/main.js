@@ -88,4 +88,93 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // --- Countdown Timer Functionality ---
+    function initCountdownTimer() {
+        const countdownTimer = document.getElementById('countdown-timer');
+        if (!countdownTimer) return;
+
+        // Set the target date (Career Quest: October 10th, 2025 at 3:00 PM CDT)
+        const targetDate = new Date('2025-10-10T15:00:00-05:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                // Update the display
+                const daysElement = document.getElementById('days');
+                const hoursElement = document.getElementById('hours');
+                const minutesElement = document.getElementById('minutes');
+                const secondsElement = document.getElementById('seconds');
+
+                if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
+                if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
+                if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
+                if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
+            } else {
+                // Countdown finished - show completion message
+                const countdownContent = document.querySelector('.countdown-content');
+                if (countdownContent) {
+                    countdownContent.innerHTML = `
+                        <h1 class="countdown-title">Career Quest is Here!</h1>
+                        <div class="event-details">
+                            <p class="event-date">October 10th, 2025 • 3:00 PM - 7:00 PM</p>
+                            <p class="event-location">Northshore High School Cafeteria</p>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        // Update countdown immediately and then every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    }
+
+    // Initialize countdown timer
+    initCountdownTimer();
+
+    // --- Add to Calendar functionality ---
+    function initAddToCalendar() {
+        const addToCalendarBtns = document.querySelectorAll('.add-calendar-btn');
+        
+        addToCalendarBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const eventCard = this.closest('.event-card');
+                if (!eventCard) return;
+
+                const eventTitle = eventCard.querySelector('h3')?.textContent || 'Team 1912 Event';
+                const eventDate = eventCard.querySelector('.date')?.textContent || '';
+                const eventTime = eventCard.querySelector('.time')?.textContent || '';
+                const eventDescription = eventCard.querySelector('.event-description p')?.textContent || '';
+
+                // Create calendar event data
+                const startDate = new Date();
+                const endDate = new Date(startDate.getTime() + (2 * 60 * 60 * 1000)); // 2 hours later
+
+                const calendarData = {
+                    title: eventTitle,
+                    start: startDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z',
+                    end: endDate.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z',
+                    description: eventDescription,
+                    location: 'Team 1912 Combustion'
+                };
+
+                // Create Google Calendar URL
+                const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(calendarData.title)}&dates=${calendarData.start}/${calendarData.end}&details=${encodeURIComponent(calendarData.description)}&location=${encodeURIComponent(calendarData.location)}`;
+
+                // Open in new tab
+                window.open(googleCalendarUrl, '_blank');
+            });
+        });
+    }
+
+    // Initialize add to calendar functionality
+    initAddToCalendar();
 });

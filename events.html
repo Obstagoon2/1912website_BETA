@@ -40,10 +40,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">EVENTS <span class="new-indicator">!</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="events.html" class="active">Upcoming Events <span class="new-indicator">!</span></a></li>
-                            <li><a href="calendar.html">Calendar</a></li>
+                            <li><a href="events.html" class="active">Events <span class="new-indicator">!</span></a></li>
                             <li><a href="newsletter.html">Newsletter</a></li>
-                            <li><a href="events.html#past-events">Past Events</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -78,31 +76,54 @@
     </div>
 
     <main class="page-content">
-        <div class="page-header">
-            <h1>Events</h1>
-            <p class="page-description">Stay updated with Team 1912 Combustion's upcoming events, competitions, and community activities.</p>
-        </div>
+        <!-- Featured Section - Career Quest Countdown -->
+        <section id="featured" class="countdown-hero">
+            <div class="countdown-background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="countdown-content">
+                <h1 class="countdown-title">Career Quest: STEM Edition</h1>
+                <div class="countdown-timer" id="countdown-timer">
+                    <div class="time-unit">
+                        <span class="time-value" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                </div>
+                <div class="event-details">
+                    <p class="event-date">October 10th, 2025 • 3:00 PM - 7:00 PM</p>
+                    <p class="event-location">Northshore High School Cafeteria</p>
+                </div>
+            </div>
+        </section>
 
-        <!-- Upcoming Events -->
-        <section class="events-section">
-            <div class="event-card featured-event">
-                <div class="event-header">
-                    <h2>Career Quest: STEM Edition</h2>
-                    <div class="event-date">
-                        <span class="date">October 10th</span>
-                        <span class="time">3:00 PM - 7:00 PM</span>
+        <!-- Career Quest Details Section -->
+        <section class="career-quest-details">
+            <div class="career-quest-flyer">
+                <div class="flyer-header">
+                    <h1 class="flyer-title">Career Quest: STEM Edition</h1>
+                    <div class="flyer-datetime">
+                        <span class="flyer-date">October 10th</span>
+                        <span class="flyer-time">3:00 PM - 7:00 PM</span>
                     </div>
                 </div>
                 
-                <div class="event-content">
-                    <div class="event-description">
-                        <h3>Interested in a STEM Career?</h3>
+                <div class="flyer-content">
+                    <div class="flyer-intro">
+                        <h2>Interested in a STEM Career?</h2>
                         <p>Come join us at Northshore High School for Team Combustion's Career Quest: STEM Edition! This exciting event will connect students with professionals and representatives from top institutions to explore various STEM career paths.</p>
                     </div>
                     
-                    <div class="event-details">
+                    <div class="flyer-sections">
                         <div class="careers-section">
-                            <h4>Featured Careers:</h4>
+                            <h3>Featured Careers:</h3>
                             <ul class="careers-list">
                                 <li>Mechanical Engineering</li>
                                 <li>Civil Engineering</li>
@@ -114,47 +135,90 @@
                         </div>
                         
                         <div class="institutions-section">
-                            <h4>Featuring Representatives From:</h4>
-                            <ul class="institutions-list">
-                                <li>University of New Orleans (UNO)</li>
-                                <li>Southeastern Louisiana University (SELU)</li>
-                                <li>Mississippi State University (MSU)</li>
-                                <li>And More!</li>
-                            </ul>
+                            <h3>Featuring Representatives From:</h3>
+                            <div class="institutions-logos">
+                                <div class="institution-item">
+                                    <img src="assets/sponsors/NASA.PNG" alt="NASA" class="institution-logo">
+                                    <span>NASA</span>
+                                </div>
+                                <div class="institution-item">
+                                    <img src="assets/static/other logos/USM.png" alt="University of Southern Mississippi" class="institution-logo">
+                                    <span>University of Southern Mississippi</span>
+                                </div>
+                                <div class="institution-item">
+                                    <img src="assets/static/other logos/UNO.png" alt="University of New Orleans" class="institution-logo">
+                                    <span>University of New Orleans</span>
+                                </div>
+                                <div class="institution-item">
+                                    <img src="assets/static/other logos/SELU.png" alt="Southeastern Louisiana University" class="institution-logo">
+                                    <span>Southeastern Louisiana University</span>
+                                </div>
+                                <div class="institution-item">
+                                    <span class="and-more">And More!</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="event-location">
-                        <h4>Event Details:</h4>
-                        <p><strong>Date:</strong> October 10th, 2024</p>
-                        <p><strong>Time:</strong> 3:00 PM - 7:00 PM</p>
-                        <p><strong>Location:</strong> Northshore High School Cafeteria</p>
+                    <div class="flyer-details">
+                        <h3>Event Details:</h3>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <strong>Date:</strong> October 10th, 2025
+                            </div>
+                            <div class="detail-item">
+                                <strong>Time:</strong> 3:00 PM - 7:00 PM
+                            </div>
+                            <div class="detail-item">
+                                <strong>Location:</strong> Northshore High School Cafeteria
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Calendar Events Section -->
-        <section class="calendar-section">
-            <h2 class="calendar-title" style="text-align: center;">More Upcoming Events</h2>
-            <p class="calendar-description" style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">
-                Stay updated with our latest outreach events, competitions, and community activities.
-            </p>
-
-            <!-- Sync Calendar Button -->
-            <div class="calendar-sync">
-                <a href="https://calendar.google.com/calendar/r?cid=ninq39q6r61rid4mot3h1ues5u3cmrdr@import.calendar.google.com"
-                   class="calendar-sync-button" target="_blank" rel="noopener">
-                    Sync Outreach Calendar
-                </a>
+        <!-- Upcoming Events Grid -->
+        <section id="upcoming" class="upcoming-events-section">
+            <div class="section-header">
+                <h2>Upcoming Events</h2>
+                <p>Our team calendar includes Build Space hours, meeting schedule and our outreach events.</p>
+                <p>Times and dates, subject to change. If visiting, please contact the team in advance to verify meeting times.</p>
+                <p>Come out and see our robots at outreach events.</p>
             </div>
-
-            <div id="calendar-events" class="calendar-grid"></div>
-
+            <div id="calendar-events" class="events-grid"></div>
             <button id="load-more-btn" class="add-calendar-btn" type="button">Load More Events</button>
             <p id="no-more-msg" style="display:none; color: #ccc; margin-top: 0.5rem; font-style: italic;">
                 No more events to show :(.
             </p>
+        </section>
+
+        <!-- Full Team Calendar Section -->
+        <section class="full-calendar-section">
+            <div class="section-header">
+                <h2>Full Team Calendar</h2>
+                <p>Complete schedule of all team activities and events</p>
+            </div>
+            
+            <!-- Google Calendar Embed -->
+            <div class="calendar-embed-container">
+                <iframe 
+                    src="https://calendar.google.com/calendar/embed?src=ninq39q6r61rid4mot3h1ues5u3cmrdr%40import.calendar.google.com&ctz=America%2FChicago&mode=AGENDA&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0"
+                    style="border: 0" 
+                    width="100%" 
+                    height="600" 
+                    frameborder="0" 
+                    scrolling="no">
+                </iframe>
+            </div>
+            
+            <!-- Calendar Sync Button -->
+            <div class="calendar-sync">
+                <a href="https://calendar.google.com/calendar/r?cid=ninq39q6r61rid4mot3h1ues5u3cmrdr@import.calendar.google.com"
+                   class="calendar-sync-button" target="_blank" rel="noopener">
+                    Sync Team Calendar
+                </a>
+            </div>
         </section>
 
     </main>
