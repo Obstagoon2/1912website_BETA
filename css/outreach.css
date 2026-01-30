@@ -653,6 +653,19 @@
   font-weight: 500;
 }
 
+.institution-item a,
+.institution-item a.tba-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.institution-item a:hover {
+  color: #2498DC;
+}
+
 .and-more {
   color: #FF8300 !important;
   font-style: italic;

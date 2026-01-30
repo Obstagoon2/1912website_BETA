@@ -119,6 +119,26 @@ main {
     transition: filter 0.3s ease;
 }
 
+/* Text-only sponsor names (no logo asset) */
+.sponsor-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+.sponsor-name:hover {
+    color: #2498DC;
+}
+.sponsor-name.large { min-height: 160px; }
+.sponsor-name.medium { min-height: 140px; }
+.sponsor-name.small { min-height: 100px; }
+
 /* Special adjustments for specific logos */
 .sponsor-logo[href*="dodstem"] img,
 .sponsor-logo[href*="intralox"] img {

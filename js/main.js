@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const countdownTimer = document.getElementById('countdown-timer');
         if (!countdownTimer) return;
 
-        // Set the target date (Career Quest: October 10th, 2025 at 3:00 PM CDT)
-        const targetDate = new Date('2025-10-10T15:00:00-05:00').getTime();
+        // Set the target date (Magnolia Regional: March 18th, 2026 first day)
+        const targetDate = new Date('2026-03-18T08:00:00-05:00').getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
@@ -122,10 +122,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 const countdownContent = document.querySelector('.countdown-content');
                 if (countdownContent) {
                     countdownContent.innerHTML = `
-                        <h1 class="countdown-title">Career Quest is Here!</h1>
+                        <h1 class="countdown-title">Magnolia Regional is Here!</h1>
                         <div class="event-details">
-                            <p class="event-date">October 10th, 2025 • 3:00 PM - 7:00 PM</p>
-                            <p class="event-location">Northshore High School Cafeteria</p>
+                            <p class="event-date">March 18–21, 2026 • Week 3</p>
+                            <p class="event-location">South Mississippi Fairgrounds, Laurel, MS</p>
                         </div>
                     `;
                 }
