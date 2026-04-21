@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!countdownTimer) return;
 
         // Set the target date (Magnolia Regional: March 18th, 2026 first day)
-        const targetDate = new Date('2026-03-18T08:00:00-05:00').getTime();
+        const targetDate = new Date('2026-04-29T08:00:00-05:00').getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
