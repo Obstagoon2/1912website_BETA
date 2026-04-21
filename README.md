@@ -1,4 +1,4 @@
-# **BETA** FRC Team 1912 Website
+# FRC Team 1912 Website
 
 A modern, responsive website for FRC Team 1912 built with HTML, CSS, and JavaScript.
 
